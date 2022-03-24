@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* No CSS temos 3 tipos de seletores
+
+- tag para elementos em geral, se uso para div, todas div sofrerão alteração
+- classe, para todas que forem dessa classe (nome, titulo)
+- id, sempre para utilizar um elemento, colocamos id e será unico */
+body {
+  background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.03%);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  background: #ecf4ff;
+  color: #1c1c1c;
+  margin: 64px; /*Dou margem de distância do elemento anterior para o elemteno que estou estilizando*/
+  border-radius: 20px;
+  box-shadow: 6px 6px 6px #0e1d2f;
+  padding: 64px; /*Dou margem do meu conteiner para os elementos que estão contidos nele*/
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil {
+  display: flex; /*Para dizer que vou usar flex box, um jeito facil de organizar o que está contido aqui*/
+}
+
+.perfil-foto {
+  border-radius: 460px;
+  max-height: 160px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titulo {
+  margin-left: 16px;
+}
+
+.titulo h1 {
+  /* Especifico aqui que vou estilizar a tag h1 que está contida no pai de classe título*/
+  font-weight: 700; /*Peso da fonte que importei de início no código CSS*/
+  font-size: 36px;
+}
+
+.titulo h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.tema button {
+  align-self: flex-end; /*alinhar ele sozinho, deixar ele no final*/
+  font-weight: 400;
+  font-size: 24px;
+  padding: 8px 16px; /*a primeira info é a distância entre o topo e o que ta embaixo, o segundo valor é a distância dos lados direito e esquerdo*/
+  background: #ecf4ff;
+  border-radius: 100px;
+}
+
+.projetos {
+  display: flex;
+  flex-direction: column; /*significa que a lista ficará como coluna (vertical)*/
+  background: linear-gradient(230.65deg, #499cfe 27.49%, #9cc8fc 83.19%);
+  margin-top: 32px;
+  padding: 32px;
+  box-shadow: 2px 2px 4px rgba(16, 16, 16, 0.42);
+  border-radius: 20px;
+}
+
+.projetos-titulo {
+  list-style: none; /*tirar o estilo que vem por padrão*/
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.projetos-item {
+  list-style-type: none; /*fazemos isso para remover os pontinhos que marcam cada item (estilo padrão)*/
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 48px; /*distanciamento linhas*/
+}
+
+.projetos-item a {
+  /* ou seja, toda a tag "a", contida dentro de um elemento de classe "projetos-item", será alterado*/
+  color: #1c1c1c;
+  text-decoration: none; /*remover cor azulada e o sublinhado*/
+}
+
+.dark {
+  /*quando nossa tag body tiver a class dark, ela será estilizada com os parâmetros abaixo*/
+  background: linear-gradient(236.85deg, #375b86 27.26%, #6b87a9 96.03%);
+}
+
+.dark .container {
+  /*para todo elemento 'container', dentro da classe dark*/
+  background: #333439;
+  color: #f6f6f6;
+}
+
+.dark .projetos {
+  color: #1c1c1c;
+}
+
+.dark .tema button {
+  /*escurecer botão*/
+  background: #1c1c1c;
+  color: #ffffff;
+  border: 2px solid #f7f7f7; /*definir tamanho da borda, definir que é sólida e a cor*/
+}
